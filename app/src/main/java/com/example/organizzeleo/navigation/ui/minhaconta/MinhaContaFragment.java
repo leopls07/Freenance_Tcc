@@ -298,7 +298,7 @@ public class MinhaContaFragment extends Fragment {
                         botaoTrocaNome.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                if (editTextAlt.getText().toString().length() <= 4) {
+                                if (editTextAlt.getText().toString().length() < 4) {
                                     Toast.makeText(getActivity(), "Seu nome deve ter mais de 4 caractéres", Toast.LENGTH_SHORT).show();
                                 } else {
                                     final AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
@@ -351,7 +351,7 @@ public class MinhaContaFragment extends Fragment {
 
     }
 
-  
+
 
     private void updatePassword(final String oldPassword, final String newPassword) {
         final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();

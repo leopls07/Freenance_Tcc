@@ -37,7 +37,7 @@ public class SobreFragment extends Fragment {
             .addEmail("AvetaSoftware@gmail.com","Email de contato")
             .addGroup("Redes sociais")
             .addInstagram("avetasoftware","Visite nossa página")
-            .addGitHub("leopls07/OrganizzeLeo","GitHub do nosso projeto!")
+            .addGitHub("leopls07/Freenance_Tcc","GitHub do nosso projeto!")
             .create();
     }
 }
