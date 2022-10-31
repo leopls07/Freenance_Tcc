@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#272626</color>
+    <color name="colorPrimaryDark">#272626</color>
+    <color name="colorAccent">#FFBA00</color>
+    <color name="branco_naomuitobranco">#AFFFFFFF</color>
+    <color name="startColorBackgroumd">#272626</color>
+    <color name="corTextoLaranja">#FFBA00</color>
+</resources>

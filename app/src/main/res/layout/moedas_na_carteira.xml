@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/BTCV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/ic_btc"
+        android:drawablePadding="5dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ADAV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/ic_ada"
+        android:drawablePadding="5dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/AXSV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/ic_axs2"
+        android:drawablePadding="5dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DOGEV" />
+
+    <TextView
+        android:id="@+id/APEV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_ape2"
+        android:drawablePadding="5dp"
+        android:padding="4dp"
+        android:text="TextView"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AXSV" />
+
+    <TextView
+        android:id="@+id/DOGEV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_doge2"
+        android:drawablePadding="5dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MPLV" />
+
+    <TextView
+        android:id="@+id/MPLV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/ic_maple"
+        android:drawablePadding="6dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SOLV" />
+
+    <TextView
+        android:id="@+id/SOLV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/ic_sol"
+        android:drawablePadding="6dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SLPV" />
+
+    <TextView
+        android:id="@+id/SLPV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/ic_slp"
+        android:drawablePadding="11dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ETHV" />
+
+    <TextView
+        android:id="@+id/ETHV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/ic_eth"
+        android:drawablePadding="14dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BTCV" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/LTCV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/ic_ltc"
+        android:drawablePadding="5dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ETHV"
+        app:layout_constraintTop_toBottomOf="@+id/ADAV" />
+
+    <TextView
+        android:id="@+id/XRPV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/ic_xrp"
+        android:drawablePadding="4dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/MPLV"
+        app:layout_constraintTop_toBottomOf="@+id/TRBV" />
+
+    <TextView
+        android:id="@+id/TRBV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/ic_trb"
+        android:drawablePadding="4dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SOLV"
+        app:layout_constraintTop_toBottomOf="@+id/SHIBV" />
+
+    <TextView
+        android:id="@+id/SHIBV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/ic_shib"
+        android:drawablePadding="5dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SLPV"
+        app:layout_constraintTop_toBottomOf="@+id/LTCV" />
+
+    <TextView
+        android:id="@+id/XTZV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/ic_xtz"
+        android:drawablePadding="11dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AXSV"
+        app:layout_constraintTop_toBottomOf="@+id/XRPV" />
+
+    <TextView
+        android:id="@+id/USDCV"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:drawableLeft="@drawable/ic_usdc"
+        android:drawablePadding="4dp"
+        android:padding="4dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AXSV"
+        app:layout_constraintTop_toBottomOf="@+id/XTZV" />
+</androidx.constraintlayout.widget.ConstraintLayout>

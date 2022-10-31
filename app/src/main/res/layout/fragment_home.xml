@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="225dp"
+        android:background="@drawable/side_nav_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textoSaldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:text="R$0.00"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Saldo:"
+            android:textColor="@color/branco_naomuitobranco"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/textoSaldo"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textNomeMinhaCarteira"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:text="Olá ..."
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Coloque saldo na sua conta"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+
+    <com.tobiasschuerg.prefixsuffix.PrefixSuffixEditText
+        android:id="@+id/campoSaldo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="33dp"
+        android:drawablePadding="5dp"
+        android:hint="Novo saldo"
+
+        android:inputType="number|numberDecimal"
+        android:maxLength="7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView28"
+        app:prefix="R$:" />
+
+
+    <Button
+        android:id="@+id/botaoSalvarSaldo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/botao_radius_laranja"
+        android:text="Salvar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/campoSaldo" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout69"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoSalvarSaldo"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/logonovafreenance" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Moedas na sua carteira:"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/BTC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_btc"
+            android:drawablePadding="5dp"
+            android:text="BTC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+        <TextView
+            android:id="@+id/ADA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_ada"
+            android:drawablePadding="5dp"
+            android:text="ADA"
+            app:layout_constraintStart_toEndOf="@+id/BTC"
+            app:layout_constraintStart_toStartOf="@+id/LTC"
+            app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+        <TextView
+            android:id="@+id/ETH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_eth"
+            android:drawablePadding="14dp"
+            android:text="ETH"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BTC" />
+
+        <TextView
+            android:id="@+id/SLP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_slp"
+            android:drawablePadding="11dp"
+            android:text="SLP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ETH" />
+
+        <TextView
+            android:id="@+id/SOL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_sol"
+            android:drawablePadding="6dp"
+            android:text="SOL"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SLP" />
+
+        <TextView
+            android:id="@+id/AXS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_axs2"
+            android:drawablePadding="5dp"
+            android:text="AXS"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DOGE" />
+
+        <TextView
+            android:id="@+id/MPL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_maple"
+            android:drawablePadding="6dp"
+            android:text="MPL"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SOL" />
+
+        <TextView
+            android:id="@+id/XRP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_xrp"
+            android:drawablePadding="4dp"
+            android:text="XRP"
+            app:layout_constraintStart_toEndOf="@+id/MPL"
+            app:layout_constraintStart_toStartOf="@+id/XTZ"
+            app:layout_constraintTop_toBottomOf="@+id/TRB" />
+
+        <TextView
+            android:id="@+id/APE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_ape2"
+            android:drawablePadding="5dp"
+            android:text="APE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AXS" />
+
+        <TextView
+            android:id="@+id/TRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_trb"
+            android:drawablePadding="4dp"
+            android:text="TRB"
+            app:layout_constraintStart_toEndOf="@+id/SOL"
+            app:layout_constraintStart_toStartOf="@+id/XRP"
+            app:layout_constraintTop_toBottomOf="@+id/SHIB" />
+
+        <TextView
+            android:id="@+id/XTZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_xtz"
+            android:drawablePadding="11dp"
+            android:text="XTZ"
+            app:layout_constraintStart_toEndOf="@+id/DOGE"
+            app:layout_constraintStart_toStartOf="@+id/USDC"
+            app:layout_constraintTop_toBottomOf="@+id/XRP" />
+
+        <TextView
+            android:id="@+id/LTC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_ltc"
+            android:drawablePadding="5dp"
+            android:text="LTC"
+            app:layout_constraintStart_toEndOf="@+id/ETH"
+            app:layout_constraintStart_toStartOf="@+id/SHIB"
+            app:layout_constraintTop_toBottomOf="@+id/ADA" />
+
+        <TextView
+            android:id="@+id/SHIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_shib"
+            android:drawablePadding="5dp"
+            android:text="SHIB "
+            app:layout_constraintStart_toEndOf="@+id/SLP"
+            app:layout_constraintStart_toStartOf="@+id/TRB"
+            app:layout_constraintTop_toBottomOf="@+id/LTC" />
+
+        <TextView
+            android:id="@+id/USDC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_usdc"
+            android:drawablePadding="4dp"
+            android:text="USDC"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/AXS"
+            app:layout_constraintTop_toBottomOf="@+id/XTZ" />
+
+        <TextView
+            android:id="@+id/DOGE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/ic_doge2"
+            android:drawablePadding="5dp"
+            android:text="DOGE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MPL" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="62dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

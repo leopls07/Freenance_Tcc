@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/wallet"
+            android:title="Minha Carteira" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/graficosubindoicon1"
+            android:title="Investir" />
+
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_vendericon"
+            android:title="Vender Investimentos"
+            />
+
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/minha_conta"
+            android:title="Minha Conta" />
+
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_coin_svgrepo_com"
+            android:title="Moedas Disponiveís"
+            />
+
+    </group>
+
+    <item
+        android:title="Sobre Nós">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/about"
+                android:title="Sobre Nós" />
+        </menu>
+    </item>
+
+</menu>

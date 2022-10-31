@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "687883964686",
+    "project_id": "organizze-leo",
+    "storage_bucket": "organizze-leo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687883964686:android:b20461833a922692b0075f",
+        "android_client_info": {
+          "package_name": "com.example.organizzeleo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687883964686-ag1b9rrmucl98narhi85j5jh1cdn24pc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.organizzeleo",
+            "certificate_hash": "5613bc47107ccf29869ee9139f51af510aec94f1"
+          }
+        },
+        {
+          "client_id": "687883964686-it41f31anb8todm7p61saqiidljgrfg0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0BhRQSD2azNckxbxzeAyiOWVJbTCJaOA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687883964686-it41f31anb8todm7p61saqiidljgrfg0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

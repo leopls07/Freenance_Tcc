@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.organizzeleo.navigation.ui.minhacarteira.MinhaCarteiraFragment"
+        android:label="Minha Carteira"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.organizzeleo.navigation.ui.investir.InvestirFragment"
+        android:label="Investir"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.organizzeleo.navigation.ui.minhaconta.MinhaContaFragment"
+        android:label="Minha Conta"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_tools"
+        android:name="com.example.organizzeleo.navigation.ui.moedasdisponiveis.MoedasDisponiveisFragment"
+        android:label="Moedas Disponíveis"
+        tools:layout="@layout/fragment_moedasdisponiveis" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.example.organizzeleo.navigation.ui.sobre.SobreFragment"
+        android:label="Sobre Nós"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.example.organizzeleo.navigation.ui.vender.VenderFragment"
+        android:label="Vender Investimentos"
+        tools:layout="@layout/fragment_vender" />
+</navigation>
