@@ -43,8 +43,7 @@ public class MinhaCarteiraFragment extends Fragment {
     private Button botaoSalvar;
     private DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
     private DatabaseReference firebaseRef2 = ConfiguracaoFirebase.getFirebaseDatabase();
-    private  FirebaseAuth autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
-
+    private FirebaseAuth autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -54,8 +53,8 @@ public class MinhaCarteiraFragment extends Fragment {
 
         mostrarValores();
 
-        textBTC     = view.findViewById(R.id.BTC);
-        textETH  = view.findViewById(R.id.ETH);
+        textBTC = view.findViewById(R.id.BTC);
+        textETH = view.findViewById(R.id.ETH);
         textSLP = view.findViewById(R.id.SLP);
         textSOL = view.findViewById(R.id.SOL);
         textMPL = view.findViewById(R.id.MPL);
@@ -71,6 +70,15 @@ public class MinhaCarteiraFragment extends Fragment {
         textADA = view.findViewById(R.id.ADA);
 
         textoNome = view.findViewById(R.id.textNomeMinhaCarteira);
+
+
+        textBTC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
 
         FirebaseAuth autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         String email = autenticacao.getCurrentUser().getEmail();
@@ -112,7 +120,7 @@ public class MinhaCarteiraFragment extends Fragment {
 
                         String valorSaldo = campoSaldo.getText().toString();
 
-                        if ( valorSaldo.equals("") || valorSaldo.isEmpty()) {
+                        if (valorSaldo.equals("") || valorSaldo.isEmpty()) {
                             Toast.makeText(getContext(), "Digite um Saldo Primeiro", Toast.LENGTH_SHORT).show();
                         } else {
                             FirebaseAuth autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
@@ -130,12 +138,12 @@ public class MinhaCarteiraFragment extends Fragment {
 
 
                                     textoSaldo.setText("R$" + carteira.getSaldo().toString());
-                                    if (campoSaldo.getText().toString().equals("") ) {
-                                    } else{
-                                    carteira.setSaldo(Double.parseDouble(campoSaldo.getText().toString()));
-                                    carteira.Salvar();
-                                    campoSaldo.setText("");
-                                }
+                                    if (campoSaldo.getText().toString().equals("")) {
+                                    } else {
+                                        carteira.setSaldo(Double.parseDouble(campoSaldo.getText().toString()));
+                                        carteira.Salvar();
+                                        campoSaldo.setText("");
+                                    }
 
                                 }
 
@@ -177,9 +185,7 @@ public class MinhaCarteiraFragment extends Fragment {
                 Carteira carteira = snapshot.getValue(Carteira.class);
 
 
-
                 textoSaldo.setText("R$" + carteira.getSaldo().toString());
-
 
 
             }
@@ -246,7 +252,7 @@ public class MinhaCarteiraFragment extends Fragment {
 
                 Carteira carteira = snapshot.getValue(Carteira.class);
 
-                final   DecimalFormat formato = new DecimalFormat("0.###");
+                final DecimalFormat formato = new DecimalFormat("0.###");
 
                 carteira.setSaldo(carteira.getSaldo());
 
@@ -269,38 +275,37 @@ public class MinhaCarteiraFragment extends Fragment {
                 String BTCformatado = formato.format(carteira.getBTC());
                 String ETHformatado = formato.format(carteira.getETH());
                 String SLPformatado = formato.format(carteira.getSLP());
-                String SOLformatado= formato.format(carteira.getSOL());
-                String MPLformatado= formato.format(carteira.getMPL());
-                String DOGEformatado= formato.format(carteira.getDOGE());
-                String AXSformatado= formato.format(carteira.getAXS());
-                String APEformatado= formato.format(carteira.getAPE());
-                String ADAformatado= formato.format(carteira.getADA());
-                String LTCformatado= formato.format(carteira.getLTC());
-                String SHIBformatado= formato.format(carteira.getSHIB());
-                String TRBformatado= formato.format(carteira.getTRB());
-                String XRPformatado= formato.format(carteira.getXRP());
-                String XTZformatado= formato.format(carteira.getXTZ());
-                String USDCformatado= formato.format(carteira.getUSDC());
+                String SOLformatado = formato.format(carteira.getSOL());
+                String MPLformatado = formato.format(carteira.getMPL());
+                String DOGEformatado = formato.format(carteira.getDOGE());
+                String AXSformatado = formato.format(carteira.getAXS());
+                String APEformatado = formato.format(carteira.getAPE());
+                String ADAformatado = formato.format(carteira.getADA());
+                String LTCformatado = formato.format(carteira.getLTC());
+                String SHIBformatado = formato.format(carteira.getSHIB());
+                String TRBformatado = formato.format(carteira.getTRB());
+                String XRPformatado = formato.format(carteira.getXRP());
+                String XTZformatado = formato.format(carteira.getXTZ());
+                String USDCformatado = formato.format(carteira.getUSDC());
 
 
-                textBTC.setText("BTC: "+BTCformatado);
-                textETH.setText("ETH: "+ETHformatado);
-                textSLP.setText("SLP: "+SLPformatado);
-                textSOL.setText("SOL: "+SOLformatado);
-                textMPL.setText("MPL: "+MPLformatado);
-                textDOGE.setText("DOGE: "+DOGEformatado);
-                textAXS.setText("AXS: "+AXSformatado);
-                textAPE.setText("APE: "+APEformatado);
-                textADA.setText("ADA: "+ADAformatado);
-                textLTC.setText("LTC: "+LTCformatado);
-                textSHIB.setText("SHIB: "+SHIBformatado);
-                textTRB.setText("TRB: "+TRBformatado);
-                textXRP.setText("XRP: "+XRPformatado);
-                textXTZ.setText("XTZ: "+XTZformatado);
-                textUSDC.setText("USDC: "+USDCformatado);
+                textBTC.setText("BTC: " + BTCformatado);
+                textETH.setText("ETH: " + ETHformatado);
+                textSLP.setText("SLP: " + SLPformatado);
+                textSOL.setText("SOL: " + SOLformatado);
+                textMPL.setText("MPL: " + MPLformatado);
+                textDOGE.setText("DOGE: " + DOGEformatado);
+                textAXS.setText("AXS: " + AXSformatado);
+                textAPE.setText("APE: " + APEformatado);
+                textADA.setText("ADA: " + ADAformatado);
+                textLTC.setText("LTC: " + LTCformatado);
+                textSHIB.setText("SHIB: " + SHIBformatado);
+                textTRB.setText("TRB: " + TRBformatado);
+                textXRP.setText("XRP: " + XRPformatado);
+                textXTZ.setText("XTZ: " + XTZformatado);
+                textUSDC.setText("USDC: " + USDCformatado);
 
                 carteira.Salvar();
-
 
 
             }

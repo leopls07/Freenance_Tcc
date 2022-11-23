@@ -13,19 +13,19 @@
         android:id="@+id/dropdown_image_custom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="4dp"
+        android:background="#FAFAFA"
         android:paddingLeft="8dp"
+        android:paddingTop="6dp"
         android:paddingBottom="8dp"
-        android:src="@drawable/ic_btc"/>
-
+        android:src="@drawable/ic_btc" />
 
 
     <TextView
         android:id="@+id/dropdown_text_custom"
         android:layout_width="match_parent"
-        android:textSize="16dp"
-        android:padding="7dp"
-        android:textColor="@android:color/black"
         android:layout_height="match_parent"
-        android:text="TextoFoda" />
+        android:padding="7dp"
+        android:text="TextoFoda"
+        android:textColor="@android:color/black"
+        android:textSize="16dp" />
 </LinearLayout>

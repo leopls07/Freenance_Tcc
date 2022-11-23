@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,6 +49,7 @@ public class InvestirFragment extends Fragment {
     private DatabaseReference firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
     private Button botaoComprar;
     ArrayList<ItemCustomSpinner> customList;
+    private ImageView easterEgg;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -59,6 +61,17 @@ public class InvestirFragment extends Fragment {
         textoSaldo = root.findViewById(R.id.textoSaldoInvestir);
         campoQuantidade = root.findViewById(R.id.editQuantidadeCompra);
         textoQuantidadeMoedas = root.findViewById(R.id.textQuantidadeMoeda);
+        easterEgg = root.findViewById(R.id.easterEgg);
+
+        easterEgg.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+                Toast.makeText(getActivity(), "Developer Leonardo Ama sua Namorada Bianca Borges de Souza", Toast.LENGTH_LONG).show();
+
+                return true;
+            }
+        });
 
 
         FirebaseAuth autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
@@ -394,7 +407,7 @@ public class InvestirFragment extends Fragment {
             private ArrayList<ItemCustomSpinner>getCustomList(){
         customList = new ArrayList<>();
 
-        customList.add(new ItemCustomSpinner("Escolha uma moeda",R.drawable.bitocoin));
+        customList.add(new ItemCustomSpinner("Selecione aqui",R.drawable.bitocoin));
         customList.add(new ItemCustomSpinner("BTC",R.drawable.ic_btc));
         customList.add(new ItemCustomSpinner("ETH",R.drawable.ic_eth));
         customList.add(new ItemCustomSpinner("SLP",R.drawable.ic_slp));

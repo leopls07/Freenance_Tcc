@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="4dp">
+    android:padding="12dp">
 
     <TextView
         android:id="@+id/BTCV"
@@ -130,7 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.50121653" />
 
     <TextView
         android:id="@+id/LTCV"
@@ -171,7 +171,7 @@
     <TextView
         android:id="@+id/SHIBV"
         android:layout_width="0dp"
-        android:layout_height="32dp"
+        android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_shib"
         android:drawablePadding="5dp"
         android:padding="4dp"
@@ -203,4 +203,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/AXSV"
         app:layout_constraintTop_toBottomOf="@+id/XTZV" />
+
+    <ImageView
+        android:id="@+id/botaoFecharDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fechar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

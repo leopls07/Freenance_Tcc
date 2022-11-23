@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -54,6 +55,7 @@ public class VenderFragment extends Fragment {
     private TextView textoQuantidadeMoedasCarteira;
     private TextView valorRecebidoText;
     private Button botaoVender;
+    private ImageView botaoFecharDialog;
     private TextView textoVenderTudo;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -68,6 +70,7 @@ public class VenderFragment extends Fragment {
         valorRecebidoText = view.findViewById(R.id.valorRecebidoVenda);
         botaoVender = view.findViewById(R.id.botaoVender);
         textoVenderTudo = view.findViewById(R.id.venderTudoText);
+        //botaoFecharDialog = view.findViewById(R.id.botaoFecharDialog);
 
 
         final String email = autenticacao.getCurrentUser().getEmail();
@@ -112,7 +115,7 @@ public class VenderFragment extends Fragment {
             public void onClick(View v) {
                 View view = LayoutInflater.from(getActivity()).inflate(R.layout.moedas_na_carteira, null);
 
-
+                botaoFecharDialog = view.findViewById(R.id.botaoFecharDialog);
                 textBTC = view.findViewById(R.id.BTCV);
                 textETH = view.findViewById(R.id.ETHV);
                 textSLP = view.findViewById(R.id.SLPV);
@@ -130,7 +133,7 @@ public class VenderFragment extends Fragment {
                 textADA = view.findViewById(R.id.ADAV);
 
 
-                AlertDialog builder = new AlertDialog.Builder(getActivity()).create();
+                final AlertDialog builder = new AlertDialog.Builder(getActivity()).create();
                 builder.setView(view);
                 builder.show();
                 FirebaseAuth autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
@@ -210,6 +213,14 @@ public class VenderFragment extends Fragment {
                     }
 
                 });
+
+                botaoFecharDialog.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        builder.dismiss();
+                    }
+                });
+
             }
         });
 
@@ -225,8 +236,8 @@ public class VenderFragment extends Fragment {
                 final String coin = item.getSpinnerString();
 
                 if (position == 0) {
-                    textoRespostaSpinner.setText("");
-                    textoQuantidadeMoedasCarteira.setText("");
+                    textoRespostaSpinner.setText("Escolha uma moeda para verificar seu preço");
+                    textoQuantidadeMoedasCarteira.setText("...");
                 } else {
                     campoQuantidade.setText(null);
 
@@ -357,7 +368,7 @@ public class VenderFragment extends Fragment {
 
 
                                         if (campoQuantidade.getText().toString().equals("")) {
-                                            valorRecebidoText.setText("");
+                                            valorRecebidoText.setText("Você receberá R$: ...");
 
                                         } else {
                                             Double quantidadeVendida = Double.parseDouble(campoQuantidade.getText().toString());

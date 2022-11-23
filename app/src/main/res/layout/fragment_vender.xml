@@ -5,25 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout4"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="120dp"
         android:background="@drawable/side_nav_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
         <TextView
             android:id="@+id/textoNomeVender"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="36dp"
             android:text="Olá ..."
             android:textColor="@android:color/white"
             android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -32,29 +35,28 @@
             android:id="@+id/textoSaldoVender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
             android:text="R$0.00"
             android:textColor="@android:color/white"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView52"
+            app:layout_constraintTop_toBottomOf="@+id/textoNomeVender" />
 
         <TextView
             android:id="@+id/textView52"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
             android:text="Saldo:"
             android:textColor="@color/branco_naomuitobranco"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/textoSaldoVender"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoNomeVender" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     <Spinner
         android:id="@+id/spinnerVendas"
@@ -69,12 +71,14 @@
         android:id="@+id/textView27"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
         android:text="Escolha uma moeda para vender"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
+        android:textColor="@color/corTextoLaranja"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
@@ -83,10 +87,12 @@
         android:id="@+id/textValorAtualVendas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="33dp"
+        android:layout_marginEnd="36dp"
+        android:text="Escolha uma moeda para verificar o preço"
         android:textAlignment="center"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,9 +102,10 @@
         android:id="@+id/textQuantidadeMoedaCarteira"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="24dp"
-        android:text="Atualmente você tem: \n X Bitcoin"
+        android:text="..."
+        android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textValorAtualVendas" />
 
@@ -106,9 +113,9 @@
         android:id="@+id/textInputLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
         android:hint="Quanto você deseja vender?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,18 +133,18 @@
         android:id="@+id/botaoVender"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="56dp"
         android:background="@drawable/botao_radius_laranja"
         android:text="Vender"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/valorRecebidoVenda" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/easterEgg"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
@@ -150,25 +157,30 @@
     <TextView
         android:id="@+id/checarMoedasCarteira"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginStart="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="16dp"
-        android:text="Cheque as moedas na sua carteira"
-        android:textColor="@color/corTextoLaranja"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:background="@drawable/borda"
+        android:drawableLeft="@drawable/wallet"
+        android:drawablePadding="5dp"
+        android:padding="8dp"
+        android:text="Confira as moedas na sua carteira"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botaoVender" />
+        app:layout_constraintTop_toBottomOf="@+id/venderTudoText" />
 
     <TextView
         android:id="@+id/valorRecebidoVenda"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
-        android:text="Você receberá R$XXX"
-        android:textAlignment="center"
+        android:text="Você receberá R$: ..."
+        android:textAlignment="textStart"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
@@ -177,13 +189,18 @@
         android:id="@+id/venderTudoText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/borda"
+        android:drawableLeft="@drawable/ic_vendericon"
+        android:drawablePadding="5dp"
+        android:padding="8dp"
         android:text="Vender Tudo"
-        android:textColor="@color/corTextoLaranja"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textValorAtualVendas" />
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoVender" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
