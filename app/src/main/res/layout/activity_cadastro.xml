@@ -69,16 +69,16 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="188dp"
-        android:layout_height="172dp"
+        android:layout_height="180dp"
         android:layout_marginBottom="32dp"
-        android:scaleType="centerCrop"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        app:srcCompat="@drawable/ideialogoqueeugostei" />
+        app:srcCompat="@drawable/logonovafreenance" />
 
     <Button
         android:id="@+id/buttonCadastrar"

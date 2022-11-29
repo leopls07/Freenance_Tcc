@@ -115,11 +115,11 @@
         android:ems="10"
         android:hint="Quantidade desejada"
         android:inputType="numberDecimal"
-        app:prefix="R$: "
-        android:maxLength="7"
+        android:maxLength="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textRespostaSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/textRespostaSpinner"
+        app:prefix="R$: " />
 
     <TextView
         android:id="@+id/textQuantidadeMoeda"

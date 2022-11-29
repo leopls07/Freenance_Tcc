@@ -24,11 +24,6 @@
             android:icon="@drawable/minha_conta"
             android:title="Minha Conta" />
 
-        <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_coin_svgrepo_com"
-            android:title="Moedas Disponiveís"
-            />
 
     </group>
 

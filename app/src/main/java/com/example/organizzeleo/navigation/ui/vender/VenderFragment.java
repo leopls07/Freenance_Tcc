@@ -402,7 +402,7 @@ public class VenderFragment extends Fragment {
 
                                                         AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
                                                         dialog.setTitle("Você deseja mesmo vender?");
-                                                        dialog.setMessage("O valor da venda será voltado para o seu saldo com a cotação atual da moeda");
+                                                        dialog.setMessage("O valor da venda será voltado para o seu saldo com a cotação atual da moeda. Ao vender parcialmente sempre sobrará pequenas parcelas na carteira. Para vender tudo use o botão apropriado");
 
                                                         dialog.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
                                                             @Override
