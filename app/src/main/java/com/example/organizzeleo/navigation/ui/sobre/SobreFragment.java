@@ -25,10 +25,9 @@ public class SobreFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
 
-        String descricao = "Somos a aveta Software e esta é a freenance. \n \n " +
-                "Com o objetivo de facilitar o aprendizado no mundo dos investimentos.  \n" +
-                "Surgiu a ideia de que se criasse um aplicativo que simulasse-os.  \n" +
-                "Assim fazendo o ensino ser prático e sem riscos";
+        String descricao = "Eai pessoal, tudo bem? aqui quem fala é o Manoel Gomes do Futuro";
+
+
 
     return new AboutPage(getActivity())
             .setDescription(descricao)
